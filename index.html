@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Astro Weight Calculator</title>
+		<script src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+		<script src="index.js"></script>
+	</head>
+	<style type="text/css">
+		#list {
+			display: inline-flex;	
+			display: column;
+			letter-spacing: .25px;		
+		}
+		#header {
+			font-size: 50px;
+			font-weight: bold;
+		}
+		li {
+			font-weight: bold;
+			font-size: 20px;
+		}
+		p {
+			background-color: rgb(200, 200, 300);
+			font-size: 20px;
+			border-radius: 25px;
+			padding: 10px;
+		}
+		#weight, #select, #button {
+			border-radius: 20px;
+		}
+	</style>
+	<body>
+		<header id="header">Astro Weight Calculator</header>
+		<hr>
+		<ul id="list" style="list-style-type: none" >
+			<li>Your Weight</li>
+				<input type="text" id="weight">
+				<br>
+			<li>Select a Planet</li>
+			<select id="select">
+				<option value="27.9">Sun</option>
+				<option value="0.377">Mercury</option>
+				<option value="0.9032">Venus</option>
+				<option value="1">Earth</option>
+				<option value="0.1655">Moon</option>
+				<option value="0.3895">Mars</option>
+				<option value="2.640">Jupiter</option>
+				<option value="1.139">Saturn</option>
+				<option value="0.917">Uranus</option>
+				<option value="1.148">Neptune</option>
+				<option value="0.06">Pluto</option>
+			</select>
+		</ul>
+		<button type="submit" id="button" onclick="calculate()">Calculate</button>
+		<p id="result"></p>
+	</body>
+</html>
